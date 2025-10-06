@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Certificates
+*.pem
+
+# Package-lock
+package-lock.json
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# npm package lock
+package-lock.json

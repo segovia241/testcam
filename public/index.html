@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesamiento de Video en Tiempo Real</title>
+    <style>
+        .container { display: flex; gap: 20px; padding: 20px; }
+        .video-panel, .results-panel { flex: 1; border: 1px solid #ccc; padding: 15px; }
+        video { width: 100%; max-width: 640px; background: #000; }
+        .controls { margin: 10px 0; }
+        button { margin: 5px; padding: 10px; }
+        #status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+        #results { background: #f8f9fa; padding: 15px; min-height: 200px; }
+        .result-item pre { background: #fff; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-panel">
+            <h2>📹 Cámara en Tiempo Real</h2>
+            <select id="cameraSelect">
+                <option value="user">Cámara Frontal</option>
+                <option value="environment">Cámara Trasera</option>
+            </select>
+            <video id="localVideo" autoplay playsinline></video>
+            
+            <div class="controls">
+                <button id="connectBtn">🔗 Conectar al Servidor</button>
+                <button id="stopBtn">⏹ Detener</button>
+            </div>
+            
+            <div id="status" class="status disconnected">
+                Estado: Desconectado
+            </div>
+        </div>
+        
+        <div class="results-panel">
+            <h2>📊 Resultados del Análisis</h2>
+            <div id="results">Esperando datos...</div>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #1a1a1a;
+    color: white;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.video-panel, .results-panel {
+    flex: 1;
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+}
+video {
+    width: 100%;
+    border: 2px solid #444;
+    border-radius: 5px;
+}
+canvas {
+    display: none;
+}
+.controls {
+    margin: 15px 0;
+}
+button {
+    background: #007cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+button:hover {
+    background: #005a87;
+}
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+#results {
+    background: #3d3d3d;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 100px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+.status {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.connected {
+    background: #2d5a2d;
+}
+.disconnected {
+    background: #5a2d2d;
+}
